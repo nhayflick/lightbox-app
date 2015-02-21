@@ -1,0 +1,25 @@
+.my-class {
+  margin: 10px;
+}
+
+.my-class:hover {
+  opacity: .6;
+}
+
+#lightbox {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*TODO: do this right*/
+  padding-top: 10%;
+  position: fixed;
+  background-color: rgba(0,0,0, 0.5);
+  text-align: center;
+  color: white;
+  display: none;
+}
+
+#lightbox.visible {
+  display: block;
+}

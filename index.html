@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <title>Lightbox App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
 
   <body>
     <h1>Photoset App</h1>
     <div id="results-div"></div>
+    <div id="lightbox" class="lightbox">
+      <img id="lightbox-image" class="lightbox-image">
+      <h4 id="lightbox-label"></h4>
+    </div>
 
+    <!-- Load Scripts After DOM -->
     <script src="app.js"></script>
     <script src="photoset.js"></script>
   </body>
