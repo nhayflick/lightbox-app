@@ -1,3 +1,7 @@
+body.lightbox-open {
+  overflow: hidden;
+}
+
 .my-class {
   margin: 10px;
 }

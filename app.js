@@ -6,6 +6,7 @@ var AppController = (function () {
 
   var photoSetData = [];
 
+  // Renders a Flickr PhotoSet Data Object to the DOM
   function render (data) {
     photoSetData = data;
     var photoCollection = photoSetData.photo;
@@ -25,19 +26,24 @@ var AppController = (function () {
     }
   }
 
+  // Launchs a fullscreen lightbox displaying an image in the photoset
   function launchLightBox(index) {
-    console.log(photoSetData);
     document.getElementById('lightbox').className = 'visible';
     document.getElementById('lightbox').addEventListener('click', hideLightBox, false);
     document.getElementById('lightbox-image').src = constructPhotoUrl(photoSetData.photo[index], false);
     document.getElementById('lightbox-label').innerHTML = photoSetData.photo[index].title;
+    // Prevent background scrolling
+    document.body.className = 'lightbox-open';
   }
 
+  // Hide the lightbox
   function hideLightBox() {
     document.getElementById('lightbox').className = '';
+    document.body.className = '';
     // TODO: Destroy Listener
   }
 
+  // Construct a src url for an image as a thumbnail or full image
   function constructPhotoUrl(photoData, thumbnail) {
     var imageExt = thumbnail ? '_t.jpg' : '.jpg';
     return 'https://farm'
