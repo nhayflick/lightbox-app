@@ -1,12 +1,52 @@
+body {
+  font-family: lato;
+}
+
 body.lightbox-open {
   overflow: hidden;
 }
 
-.my-class {
-  margin: 10px;
+header {
+  z-index: 1;
+  text-align: center;
+  background-color: #2196F3;
+  color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
-.my-class:hover {
+header > h1 > a {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.container {
+  max-width: 840px;
+  margin: auto;
+  text-align: center;
+}
+
+.inner-container {
+  display: inline;
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+}
+
+.nav-spacer {
+  height: 80px;
+}
+
+.img-thumb {
+  margin: 10px;
+  float: left;
+}
+
+.img-thumb:hover {
   opacity: .6;
 }
 
@@ -16,14 +56,83 @@ body.lightbox-open {
   left: 0;
   right: 0;
   /*TODO: do this right*/
-  padding-top: 10%;
+  padding-top: 150px;
   position: fixed;
+  z-index: 2;
   background-color: rgba(0,0,0, 0.5);
   text-align: center;
-  color: white;
   display: none;
 }
 
 #lightbox.visible {
   display: block;
+}
+
+button {
+  padding:10px;
+  background-color: #2196F3;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 300;
+  color:white;
+  text-decoration:none;
+}
+
+@media (max-width: 620px) {
+  .photo-container {
+    max-width: 230px;
+  }
+}
+
+.photo-container {
+  display: inline-block;
+  background-color: white;
+  padding: 14px;
+  border-radius: 4px;
+}
+
+.lightbox-image {
+  width: 100%;
+  height: auto;
+}
+
+.lightbox-image.loading {
+  visibility: hidden;
+}
+
+.arrow-container {
+  display: inline-block;
+/*  height: 100%;
+*/}
+
+.arrow-container > button {
+  background: none;
+  font-size: 60px;
+  font-weight: 900;
+  padding: 30px 2px;
+  color: #eee;
+  outline: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s
+}
+
+.arrow-container > button:hover {
+  color: #white;
+  transform: scale(1.2);
+}
+
+.arrow-container > button:disabled {
+  color: rgb(190, 188, 188);
+  font-size: 70px;
+}
+
+/*Utility Classes*/
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }

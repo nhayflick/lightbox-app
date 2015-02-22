@@ -4,19 +4,47 @@
     <meta charset="UTF-8">
     <title>Lightbox App</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> 
   </head>
 
   <body>
-    <h1>Photoset App</h1>
-    <div id="results-div"></div>
-    <div id="lightbox" class="lightbox">
-      <img id="lightbox-image" class="lightbox-image">
-      <h4 id="lightbox-label"></h4>
+    <header>
+       <h1><a href="">Photoset App</a></h1>
+    </header>
+    <div class="nav-spacer"></div>
+
+    <!-- Responsive container -->
+    <div class="container">
+
+      <!-- Photo Set Info -->
+      <h3>
+        <span id="set-label"></span>
+      </h3>
+
+      <!-- Container for photo thumbnails -->
+      <div id="thumbnail-container" class="inner-container clearfix"></div>
     </div>
+
+        <!-- Lighbox Overlay -->
+    <div id="lightbox" class="lightbox">
+      <div class="arrow-container">
+        <button id="previous-image">&lsaquo;</button>
+      </div>
+      <div class="photo-container">
+        <img id="lightbox-image" class="lightbox-image">
+        <h3 id="lightbox-label"></h3>
+      </div>
+      <div class="arrow-container">
+        <button id="next-image">&rsaquo;</button>
+      </div>
+    </div>
+
+    <footer>
+      <h5>Built by Nathan Hayflick</h5>
+    </footer>
 
     <!-- Load Scripts After DOM -->
     <script src="app.js"></script>
     <script src="photoset.js"></script>
   </body>
-
 </html>
