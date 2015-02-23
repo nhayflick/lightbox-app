@@ -1,3 +1,4 @@
+/*Global Styles*/
 body {
   font-family: lato;
 }
@@ -18,8 +19,8 @@ header {
 }
 
 header > h1 > a {
-  color: white !important;
-  text-decoration: none !important;
+  color: white;
+  text-decoration: none;
 }
 
 .container {
@@ -42,6 +43,10 @@ footer {
 }
 
 .img-thumb {
+  height: 66px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 10px;
   float: left;
 }
@@ -50,16 +55,18 @@ footer {
   opacity: .6;
 }
 
+/*Lightbox Styles*/
+
 #lightbox {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  /*TODO: do this right*/
-  padding-top: 150px;
+  padding-top: 120px;
   position: fixed;
   z-index: 2;
-  background-color: rgba(0,0,0, 0.5);
+  color: #eee;
+  background-color: rgba(0,0,0, 0.7);
   text-align: center;
   display: none;
 }
@@ -87,7 +94,8 @@ button {
 
 .photo-container {
   display: inline-block;
-  background-color: white;
+  background-color: rgb(245, 245, 245);
+  color: black;
   padding: 14px;
   border-radius: 4px;
 }
@@ -97,14 +105,9 @@ button {
   height: auto;
 }
 
-.lightbox-image.loading {
-  visibility: hidden;
-}
-
 .arrow-container {
   display: inline-block;
-/*  height: 100%;
-*/}
+}
 
 .arrow-container > button {
   background: none;
@@ -118,7 +121,6 @@ button {
 }
 
 .arrow-container > button:hover {
-  color: #white;
   transform: scale(1.2);
 }
 
@@ -127,7 +129,8 @@ button {
   font-size: 70px;
 }
 
-/*Utility Classes*/
+/*Utility Styles*/
+
 .clearfix:after {
   visibility: hidden;
   display: block;
