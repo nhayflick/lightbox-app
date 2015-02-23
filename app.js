@@ -126,6 +126,8 @@ var PhotosetApp = (function() {
         if (e.target.id != 'lightbox') return false;
         // Toggle display none
         lightboxContainer.className = '';
+        // Clear image when closing
+        lightboxImage.removeAttribute('src');
         // Reenable scrolling
         document.body.className = '';
         // Reset lightbox index
