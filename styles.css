@@ -45,10 +45,11 @@ footer {
 .img-thumb {
   height: 66px;
   width: 100px;
-  background-repeat: no-repeat;
-  background-size: cover;
   margin: 10px;
   float: left;
+/*  display: inline-block;
+*/  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .img-thumb:hover {
@@ -132,10 +133,7 @@ button {
 /*Utility Styles*/
 
 .clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
+  content: "";
+  display: table;
   clear: both;
-  height: 0;
 }
